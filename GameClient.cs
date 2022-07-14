@@ -238,7 +238,7 @@ namespace BobboNet.Networking.Unity
         /// <param name="deliveryMethod">How the data was delivered.</param>
         private void OnNetworkReceive(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
-            Debug.Log($"Reading {reader.AvailableBytes} bytes from server...");
+            // Debug.Log($"Reading {reader.AvailableBytes} bytes from server...");
             packetProcessor.ReadAllPackets(reader, peer);
         }
 
