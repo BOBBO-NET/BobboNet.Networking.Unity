@@ -10,7 +10,7 @@ namespace BobboNet.Networking.Unity
     public abstract class GameClient<SelfType, PlayerType, PlayerUpdate> : MonoBehaviour, IGameClient, ISubSystem
         where SelfType : GameClient<SelfType, PlayerType, PlayerUpdate>
         where PlayerType : GamePlayer<PlayerUpdate>
-        where PlayerUpdate : class, INetSerializable, new()
+        where PlayerUpdate : class, INetSerializable, ICopyConstructor<PlayerUpdate>, new()
     {
         //
         //  Properties
