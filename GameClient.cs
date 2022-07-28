@@ -73,6 +73,7 @@ namespace BobboNet.Networking.Unity
 
             // Register nested data types
             processor.RegisterBobboNetNestedTypes();
+            processor.RegisterNestedType(() => new StandardMessages<PlayerUpdate>.SCM_PlayerUpdate());
             processor.RegisterNestedType(() => new StandardMessages<PlayerUpdate>.SM_BatchPlayerUpdates());
             processor.RegisterNestedType(() => new StandardMessages<PlayerUpdate>.SM_InitialPlayerUpdates());
             processor.RegisterNestedType(() => new StandardMessages<PlayerUpdate>.SM_PlayerJoin());
